@@ -1,0 +1,73 @@
+.container {
+  border: 1px solid #d1effc;
+  background: linear-gradient(
+    115.7deg,
+    rgb(3, 79, 135) 6.2%,
+    rgb(0, 184, 214) 112.9%
+  );
+  border-radius: 10px 10px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  max-width: 600px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+form {
+  padding-top: 12px;
+}
+button {
+  color: white;
+  font-size: 16px;
+  background-color: #fac93b;
+  border: #fac93b;
+  padding: 10px 15px 10px;
+  text-align: center;
+  border-radius: 50%;
+  transition: ease-in-out;
+  transition-delay: 100ms;
+  box-shadow: 5px 5px 5px rgba(0, 0, 255, 0.2);
+}
+button:hover {
+  background-color: #c59101;
+}
+h1 {
+  padding-top: 80px;
+  color: white;
+  font-size: 50px;
+}
+h1,
+h5,
+h6,
+.high-low-temp,
+.current-weather-description,
+.card-daily-forecast,
+.card-daily-info {
+  text-align: center;
+}
+
+.weather-icon {
+  color: #fac93b;
+  font-size: 40px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 50px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.col-2 {
+  position: center;
+}
+.temp-symbols {
+  font-size: 14px;
+  position: relative;
+  top: -25px;
+}
+.unit {
+  color: #fac93b;
+}
+.signature {
+  font-size: 12px;
+}
