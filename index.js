@@ -1,10 +1,23 @@
-function showCityTemperature(event) {
-  document.querySelector("#search-city-input").innerhtml = response.data.name;
-  document.querySelector("#degrees").innerhtml = response.data.main.temp;
+function showCityTemperature(response) {
+  document.querySelector("h1").innerHTML = response.data.name;
+  document.querySelector("#weather-description").innerHTML =
+    response.data.weather[0].description;
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector("#degrees").innerHTML = Math.round(
+    response.data.main.temp
+  );
 }
 
 function search(event) {
   event.preventDefault();
+  let city = document.querySelector("#search-city-input").value;
+  searchCity(city);
+}
+
+function searchCity(city) {
   let apiKey = "c7a41370255e0635d2eca1a890a08940";
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
@@ -37,11 +50,3 @@ if (minutes < 10) {
 }
 
 currentTime.innerHTML = `as of ${day} at ${hours}:${minutes}`;
-
-function clickFahrenheit(event) {
-  event.preventDefault();
-  let fahrenheit = document.querySelector("#fahrenheit-link");
-}
-
-let fahrenheit = document.querySelector("#fahrenheit-link");
-fahrenheit.addEventListener("click", clickFahrenheit);
